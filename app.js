@@ -21,14 +21,14 @@ app.get('/v1/fetch-albums', async (req, res) => {
     // add each object info to DB
     for (let i = 0; i < data.length; i++) {
         let albumObject = data[i]; // object
-        const { serial, type, water_landings } = albumObject; // destructuring
+        const { artist, genre, name } = albumObject; // destructuring
 
-        db.Capsule.create({
-            serial: serial,
-            type: type,
-            waterLandings: water_landings
-        }, (err, newCapsule) => {
-            console.log(newCapsule);
+        db.Album.Create({
+            artist: artist,
+            genre: genre,
+            name: name
+        }, (err, newAlbum) => {
+            console.log(newAlbum);
         });
     }
 
@@ -36,5 +36,5 @@ app.get('/v1/fetch-albums', async (req, res) => {
 });
 
 const server = app.listen(PORT, () => {
-    console.log(`Server is running on PORT: ${PORT}`);
+    console.log(`We have some great tunes on PORT: ${PORT}`);
 });
