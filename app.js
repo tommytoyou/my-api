@@ -16,7 +16,7 @@ app.get('/v1', (req, res) => {
 
 app.get('/v1/fetch-albums', async (req, res) => {
     // Run axios
-    const response = await axios.get('https://api.spotify.com/v1/albums');
+    const response = await axios.get('https://api.spotify.com/v1/albums/{31mrydjjdeup5fbw3ltr2ak7bgry}');
     const data = response.data; // array of objects [{}, {}, {}]
     // add each object info to DB
     for (let i = 0; i < data.length; i++) {
