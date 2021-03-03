@@ -1,0 +1,24 @@
+{
+  "name": "my-api",
+  "version": "1.0.0",
+  "description": "Class project making an api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommytoyou/my-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommytoyou/my-api/issues"
+  },
+  "homepage": "https://github.com/tommytoyou/my-api#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
+  }
+}
